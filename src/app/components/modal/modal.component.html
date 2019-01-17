@@ -1,0 +1,26 @@
+<div class="modal fade {{ modalIsOpen }}" tabindex="-1" role="dialog" (click)="close()">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="{{ photo.user.profile_image.large }}" alt="Profile Photo: {{ photo.user.first_name }} {{ photo.user.last_name }}" title="{{ photo.user.first_name }} {{ photo.user.last_name }}" />
+                    </div>
+                    <div class="col-9">
+                        {{ photo.user.first_name }} {{ photo.user.last_name }}<br />{{ photo.created_at }}
+                    </div>
+                    <div class="col-2">
+                        <ug-photo-ico [value]="photo.likes" [class]="'heart'"></ug-photo-ico><br />
+                        <ug-photo-ico [value]="photo.views" [class]="'eye'"></ug-photo-ico>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <img src="{{ photo.urls.full }}" alt="{{ photo.description }}" title="Photo by {{photo.user.first_name}} | {{ photo.description }}" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" (click)="close()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

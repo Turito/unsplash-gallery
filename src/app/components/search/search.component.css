@@ -1,0 +1,17 @@
+#navbarsUnsplash {
+    background: #b94f4f;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#navbarsUnsplash form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#navbarsUnsplash form input {
+    width: 100%;
+}

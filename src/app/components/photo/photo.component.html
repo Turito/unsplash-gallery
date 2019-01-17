@@ -1,0 +1,18 @@
+<div *ngIf="show" class="cover_image mb-3">
+    <div class="hover" (click)="toggleModal()"><i class="fa fa-eye"></i></div>
+    <img src="{{ photo.urls.custom }}" alt="{{ photo.description }}" title="{{ photo.description }}" class="img-fluid" />
+    <div class="img-desc-wrap">
+        <div class="title">
+            <ug-photo-attr [value]="photo.description"></ug-photo-attr>
+        </div>
+        <div class="likes-watch-wrap mt-2 clearfix">
+            <div class="likes pull-left">
+                <ug-photo-ico [value]="photo.likes" [class]="'heart'"></ug-photo-ico>
+            </div>
+            <div class="watch pull-right">
+                <ug-photo-ico [value]="photo.views" [class]="'eye'"></ug-photo-ico>
+            </div>
+        </div>
+    </div>
+</div>
+<ug-modal *ngIf="modalOpen" (onClose)="toggleModal()" [photo]="photo"></ug-modal>

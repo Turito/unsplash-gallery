@@ -1,0 +1,5 @@
+<div class="row text-center text-lg-left gallery" *ngIf="gallery">
+    <div *ngFor="let photo of gallery.results" class="col-lg-3 col-md-4 col-6">
+        <ug-photo [photoId]="photo.cover_photo.id"></ug-photo>
+    </div>
+</div>
